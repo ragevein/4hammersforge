@@ -1,0 +1,109 @@
+.container {
+    z-index: 25;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.container .card {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 800px;
+    height: 70vh;
+    background: linear-gradient(45deg, #1a2f3f, #7094ce);
+}
+ 
+.container .card .content{
+    position: relative;
+    padding:  10px 10px 10px 10px;
+} 
+
+.game {
+    position: relative;
+    width: 600px;
+    height: 200px;
+}
+
+#game {
+    border: 1px solid #ffffff;
+}
+
+#character {
+    height: 50px;
+    width: 20px;
+    background-color: rgb(38, 170, 45);
+    position: relative;
+    top: 150px;
+        
+}
+
+.animate {
+    animation: jump 500ms infinite;
+}
+
+.color {
+    background-color: rgba(189, 109, 109, 0.849);
+}
+
+.counter {
+    font: 1.5em Fantasy;
+    color: #ffffff;
+    padding: 5px;
+    z-index: 50;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    border: 2px solid #ffffff;
+    background: linear-gradient(45deg, #1a2f3f, #7094ce);
+}
+
+.loops {
+    font: 1.5em Fantasy;
+    color: #ffffff;
+    padding: 5px;
+    z-index: 50;
+    position: absolute;
+    top: 60px;
+    right: 640px;
+    border: 2px solid #ffffff;
+    background: linear-gradient(45deg, #1a2f3f, #7094ce);
+}
+
+.play {
+    color: black;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 305px;
+    left: 100px;
+}
+
+#block {
+    height: 25px;
+    width: 25px;
+    background-color: blue;
+    position: relative;
+    top: 125px;
+    left: 575px;    
+}
+
+.start {
+    animation-delay: 2.5s;
+    animation: block 1s infinite;
+}
+
+@keyframes block {
+    0%{left:575px;}
+    100%{left:0px;}
+}
+
+@keyframes jump {
+    0%{top:150px;}
+    50%{top:100px; background-color: black;}
+    70%{top:100px; background-color: black;}
+    100%{top:150px;}
+}

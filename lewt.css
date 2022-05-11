@@ -1,0 +1,250 @@
+.container {
+    z-index: 25;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+}
+
+.a .button {
+    background-color: black;
+}
+
+.container .card {
+    z-index: 86;
+}
+
+select {
+    font-size: 14pt;
+}
+
+.container .card h1 {
+    font-family: fantasy;
+}
+    
+.container .card {
+    position: relative;
+    width: 800px;
+    height: 70vh;
+    margin: 20px;
+    display: flex;
+    transition: 0.5s;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(45deg, #1a2f3f, #7094ce);
+}
+
+.container .card img#silo{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+    transition: 0.5s;
+}
+
+.container .card:hover img#silo {
+    left: 80%;
+    bottom: -10%;
+    height: 550px;
+}
+
+.container .card .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    opacity: 0;
+    visibility: hidden;
+    padding:  20px 20px 20px 40px;
+    animation: slideinfromRight 1s ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideinfromRight {
+    0% {opacity: 0; visibility: none; left: 20%;}
+    100% {opacity: 1; visibility: visible; left: 0;}
+}
+
+/*timing-function iteration-count direction fill-mode transition:  0.5s;*/
+.container .card:hover .content {
+    translate: scale(120%);
+}
+
+.container .card .content h2 {
+    text-transform: uppercase;
+    font-size: 2.2em;
+    line-height: 1em;
+}
+
+.container .card .content p {
+    color: #ffffff;
+}
+
+.container .card .content a {
+    position: relative;
+    color: #ffffff;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#d-6 {
+    position: absolute;
+    width: 23px;
+    top: 0px;
+    transform: rotate(20deg);
+}
+
+#d-5 {
+    position: absolute;
+    width: 25px;
+    left: 35px;
+    top: 6px;
+    transform: rotate(85deg);
+}
+
+#dice {
+    position: relative;
+    left: 200px;
+    animation: cart 3s infinite; 
+    animation-timing-function: linear;
+}
+
+#dice:hover #d-5, #dice:hover #d-6 {
+    transition: 400ms;
+    transform:scale(120%);
+}
+
+@keyframes cart {
+    0%{top:0px;}
+    50%{top:5px}
+    100%{top:0px;}
+}
+
+#d1 {
+    display: none;
+    position:absolute;
+}
+#d2 {
+    display: none;
+    position:absolute;
+}
+#d3 {
+    display: none;
+    position:absolute;
+}
+#d4 {
+    display: none;
+    position:absolute;
+}
+#d5 {
+    display: none;
+    position:absolute;
+}
+#d6 {
+    display: none;
+    position:absolute;
+}
+
+/* New Dice stuffs */
+@keyframes roll {    
+    0% {transform: translateX(0px) translateY(0px) scale(20%) rotate(0deg); opacity: 0;}
+    20% {transform: translateX(-20px) translateY(-50px) scale(20%) rotate(150deg); opacity: .5;}
+    40% {transform: translateX(-40px) translateY(0px) scale(30%) rotate(210deg); opacity: .8;}    
+    50% {transform: translateX(-50px) translateY(-50px) scale(40%) rotate(450deg);  opacity: 1;}
+    70% {transform: translateX(-70px) translateY(0px) scale(50%) rotate(465deg); }    
+    80% {transform: translateX(-80px) translateY(-15px) scale(60%) rotate(590deg); }
+    90% {transform: translateX(-90px) translateY(0px) scale(80%) rotate(610deg); }
+    100% {transform: translateX(-100px) translateY(0px) scale(100%) rotate(720deg); opacity: 1;}
+}
+
+.die {
+    opacity: 0;
+    position: relative;
+    animation: roll 1.3s linear;
+    animation-delay: .7s;
+    animation-fill-mode: forwards;
+    cursor: grab;
+    right: -110px;
+}
+
+.die:hover .die {
+    transform: scale(125%);
+}
+
+.die:nth-of-type(2){
+    position: relative;
+    bottom: 0px;
+    transform: rotate(45deg);
+    right: -110px;
+    animation-delay: 1.2s;
+}
+
+.die:nth-of-type(3){
+    position: relative;
+    bottom: 0px;
+    right: -110px;
+    animation-delay: 1.6s;
+}
+
+.die:nth-of-type(4){
+    position: relative;
+    bottom: 0px;
+    right: -110px;
+    animation-delay: 1s;
+}
+
+.die:nth-of-type(5){
+    position: relative;
+    bottom: 0px;
+    right: -110px;
+    animation-delay: 1s;
+}
+
+.die:nth-of-type(6){
+    position: relative;
+    bottom: 0px;
+    right: -110px;
+    animation-delay: 1s;
+}
+
+.die:nth-of-type(7){
+    position: relative;
+    bottom: 0px;
+    right: -110px;
+    animation-delay: 1s;
+}
+
+/* end new dice */
+
+@media screen and (min-width: 980px) {
+    
+    .container .card {
+        position: relative;
+        width: 980px;
+        height: 70vh;
+        margin: 20px;
+        display: flex;
+        transition: 0.5s;
+        justify-content: flex-start;
+        align-items: center;
+        background: linear-gradient(45deg, #1a2f3f, #7094ce);
+    }
+
+    .container .card img#silo {
+        position: absolute;
+        bottom: -20;
+        height: 400px;
+        transition: 0.5s;
+    }
+
+    .container .card:hover img#silo {
+        left: 80%;
+        bottom: -5%;
+        height: 550px;
+    }
+}

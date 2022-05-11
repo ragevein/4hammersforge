@@ -1,0 +1,19 @@
+
+.modal {
+    background: linear-gradient(45deg, #1a2f3f, #7094ce);
+    padding: 1em;
+    max-width: 85ch;
+}
+
+.modal::backdrop{
+    background: rgb(0,0,0, .9);
+    opacity: .8;
+}
+
+.open-button {
+    opacity: 1;
+}
+
+#close-button {
+    opacity: 1;
+}

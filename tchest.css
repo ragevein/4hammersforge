@@ -1,0 +1,223 @@
+:root {
+    --left-1: 258px;
+    --vis-1: none;
+    --fall-speed: 2s;
+}
+
+
+.container {
+    z-index: 25;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.container .card {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 800px;
+    height: 900px;
+    background: linear-gradient(45deg, #1a2f3f, #7094ce);
+}
+
+.container .card-2 {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 150px;
+    height: 900px;
+    background: linear-gradient(45deg, #1a2f3f, #7094ce);
+}
+
+.container .card-2 H3 {
+    font-family: fantasy;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+ 
+.container .card .content{
+    position: relative;
+    padding:  10px 10px 10px 10px;
+    z-index: 15;
+} 
+
+.game {
+    position: relative;
+    width: 600px;
+    height: 500px;
+}
+
+#game {
+    border: 1px solid #ffffff;
+}
+
+#coin {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: rgb(255, 174, 0);
+    position: relative;
+    top: 0px;
+    animation-timing-function: linear;
+    left: var(--left-1);
+    display: var(--vis-1);
+}
+
+#coin:nth-child(2) {
+    left: var(--left-2);
+    display: var(--vis-1);
+}
+
+.fall {
+    animation: fall var(--fall-speed) infinite;
+}
+
+.color {
+    background-color: rgba(189, 109, 109, 0.849);
+}
+
+.missed {
+    font: 1.5em Fantasy;
+    color: #ffffff;
+    padding: 5px;
+    z-index: 50;
+    position: absolute;
+    top: 120px;
+    right: 50px;
+    border: 2px solid #ffffff;
+    background: linear-gradient(45deg, #1a2f3f, #7094ce);
+}
+
+.gold {
+    font: 1.5em Fantasy;
+    color: #ffffff;
+    padding: 5px;
+    z-index: 50;
+    position: absolute;
+    top: 120px;
+    right: 640px;
+    border: 2px solid #ffffff;
+    background: linear-gradient(45deg, #1a2f3f, #7094ce);
+}
+
+.play {
+    position: absolute;
+    color: black;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    top: 570px;
+    left: 100px;
+    z-index: 15;
+}
+
+#Layer_12 {
+    position: absolute;
+    opacity: .1;
+    z-index: 1;
+}
+
+.stop {
+    position: absolute;
+    cursor: pointer;
+    color: black;
+    width: 100px;
+    height: 50px;
+    top: 570px;
+    left: 200px;
+    z-index: 15;
+}
+
+#cart {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 470px;
+    left: 0px;
+}
+
+.start {
+    animation: cart 3s infinite; 
+}
+
+@keyframes cart {
+    0%{left:0px;}
+    50%{left:573px}
+    100%{left:0px;}
+}
+
+@keyframes fall {
+    0%{top:0px;}
+    40%{top:200px;}
+    70%{top:300px;}
+    100%{top:500px;}
+}
+
+#High-Score {
+    position: relative;
+    cursor: pointer;
+    z-index: 15;
+}
+
+#modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    justify-items: center;
+    background: linear-gradient(45deg, #1a2f3f, #7094ce);
+    padding: 1em;
+    max-width: 85ch;
+
+}
+
+#scores {
+    z-index: 80;
+}
+
+.modal::backdrop{
+    background: rgb(0,0,0, .9);
+    opacity: .8;
+}
+
+button {
+    padding: 5px 10px;
+}
+
+.upload_form {
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    width: 350px;
+
+}
+
+input[type=text] {
+    font-family: fantasy;
+    font-size: 3em;
+    width: 45px;
+}
+
+#initial {
+    width: 50%;
+    margin: auto;
+}
+
+#Cancel {
+    z-index: 55;
+}
+
+button:hover {
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 5px;
+    color: var(--color-base-font-revers);
+    background-color: #ffffff;
+    text-decoration: none;
+}

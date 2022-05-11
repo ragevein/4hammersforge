@@ -1,0 +1,48 @@
+* {
+    color: #ffffff;
+    font-family: sans-serif;
+    align-items: center;
+
+}
+
+body {
+    background-color: black;
+
+}
+
+.container {
+    background-color: cornflowerblue;
+    max-width: 80rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    margin: 0px;
+
+}
+
+.box {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    width: 80rem;
+    height: 10rem;
+    background-color: black;
+    margin: 5px;
+}
+
+.ball {
+    background-color: dimgray;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: solid 3px #ffffff;
+
+}
+
+.line {
+    background-color: #ffffff;
+    height: 1px;
+    width: 100px;
+
+}

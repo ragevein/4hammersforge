@@ -1,0 +1,251 @@
+.container {
+    z-index: 25;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+}
+
+.a .button {
+    background-color: black;
+}
+
+#open-button {
+    cursor: pointer;
+}
+
+#close-button {
+    cursor: pointer;
+}
+
+.container .card {
+    z-index: 86;
+}
+
+.slider {
+    width: 300px;
+    border-radius: 3px;
+}
+
+.container .card h1 {
+    font-family: fantasy;
+}
+
+.cool {
+    font-family: fantasy;
+    color: #E74C3C;
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+
+.cool:hover {
+    color: #ffffff;
+}
+
+.gcolor {
+    color: #FFCC33;
+    font-size: 1em;
+}
+
+.container .card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: linear-gradient(45deg, #1a2f3f, #7094ce);
+    font-size: 30pt;
+}
+
+.container .card .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    opacity: 0;
+    visibility: hidden;
+    padding:  20px 20px 20px 40px;
+    transition:  0.5s;
+}
+
+.container .card:hover .content {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.container .card .content h2 {
+    text-transform: uppercase;
+    font-size: 2.2em;
+    line-height: 1em;
+}
+
+.container .card .content p {
+    color: #ffffff;
+}
+
+.container .card .content a {
+    position: relative;
+    color: #ffffff;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#d-6 {
+    position: absolute;
+    width: 23px;
+    top: 0px;
+    transform: rotate(20deg);
+}
+
+#d-5 {
+    position: absolute;
+    width: 25px;
+    left: 35px;
+    top: 6px;
+    transform: rotate(85deg);
+}
+
+#dice {
+    position: relative;
+    left: 200px;
+    animation: cart 3s infinite; 
+    animation-timing-function: linear;
+}
+
+#dice:hover #d-5, #dice:hover #d-6 {
+    transition: 400ms;
+    transform:scale(120%);
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #1a2f3f, #7094ce);
+    padding: 1em;
+    max-width: 85ch;
+}
+
+.modal::backdrop{
+    background: rgb(0,0,0, .9);
+    opacity: .8;
+}
+
+.item {
+    background: #1a2f3f;
+    margin: 1px;
+    border-radius: 5px;
+    padding: 3px;
+}
+.fail {
+    display: inline-block;
+    position: relative;
+    color: #000000;
+    text-decoration-line: line-through;
+}
+
+.fail::after {
+    content: 'FAILED';
+    display: inline-block;
+    position: relative;
+    color: #ff0000 !important;
+    font-size: 8pt;
+    left: -25px;
+    top: 6px;
+    transform-origin: 0 0;
+    transform: rotate(-25deg);
+
+}
+
+#desc {
+    position: relative;
+    display: inline-block;
+}
+
+#desc .descinfo {
+    visibility: hidden;
+    position: absolute;
+    left: 10px;
+    background-color: #1a2f3f;
+    padding: 5px 5px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+#desc:hover .descinfo{
+    visibility: visible;
+}
+
+#dieDetails {
+    position: relative;
+}
+
+#dieDetails .dieInfo {
+    visibility: hidden;
+    position: absolute;
+    left: 10px;
+    background-color: #1a2f3f;
+    padding: 5px 5px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+#dieDetails:hover .dieInfo{
+    visibility: visible;
+}
+
+.top {
+    font-family: fantasy;
+    background: #1a2f3f;
+    padding: 5px 0;
+    text-indent: 10px;
+}
+
+h2 {
+    font-family: fantasy;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.colHead {
+    background: #355f80;
+}
+
+@media screen and (min-width: 980px) {
+    /*
+    .frame {
+        min-height: 80vh;
+    }
+    */
+
+    .container .card {
+        display: inline;
+        position: relative; 
+        width:fit-content;
+        height: auto;
+        margin: 2px;
+        padding: 4px;
+        transition: 0.5s;
+        background: linear-gradient(45deg, #1a2f3f, #7094ce);
+        font-size: 12pt;
+    }
+
+    #smack {
+        width: 300px;
+    }
+
+    .slider {
+        width: 125px;
+        border-radius: 3px;
+    }
+}
